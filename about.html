@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="About - Sakuta Web" data-ja="紹介 - Sakuta Web">About - Sakuta Web</title>
+    <meta name="description" content="About this site.">
+    <meta property="og:title" content="About - Sakuta Web">
+    <meta property="og:description" content="About this site.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sakutaweb.github.io/index.html/about.html">
+    <meta property="og:image" content="https://sakutaweb.github.io/index.html/preview.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hearts" id="hearts"></div>
+    <div class="tz-panel" aria-label="World clocks">
+        <div class="tz-card">
+            <span class="tz-dot" aria-hidden="true"></span>
+            <div class="tz-label">Japan</div>
+            <div class="tz-time" id="time-japan">--:--</div>
+        </div>
+        <div class="tz-card">
+            <span class="tz-dot" aria-hidden="true"></span>
+            <div class="tz-label">Delhi</div>
+            <div class="tz-time" id="time-delhi">--:--</div>
+        </div>
+    </div>
+    <main class="card">
+        <header class="site-header">
+            <div>
+                <span class="badge" data-en="About" data-ja="紹介">About</span>
+                <h1 data-en="About This Site" data-ja="このサイトについて">About This Site</h1>
+            </div>
+            <nav class="site-nav">
+                <a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a>
+                <a class="nav-link" href="about.html" data-en="About" data-ja="紹介">About</a>
+                <a class="nav-link" href="gallery.html" data-en="Gallery" data-ja="ギャラリー">Gallery</a>
+                <a class="nav-link" href="messages.html" data-en="Messages" data-ja="メッセージ">Messages</a>
+                <button class="nav-link ghost" type="button" id="langToggle">???</button>
+            </nav>
+        </header>
+        <p data-en="A small space built to collect memories, notes, and little surprises." data-ja="思い出やメッセージ、小さなサプライズを集める場所。">
+            A small space built to collect memories, notes, and little surprises.
+        </p>
+        <section class="section">
+            <div class="section-title" data-en="What You Will Find" data-ja="ここにあるもの">What You Will Find</div>
+            <div class="section-grid">
+                <div class="panel">
+                    <strong data-en="Memories" data-ja="思い出">Memories</strong>
+                    <span data-en="Moments worth keeping close." data-ja="大切に残したい瞬間。">Moments worth keeping close.</span>
+                </div>
+                <div class="panel">
+                    <strong data-en="Messages" data-ja="メッセージ">Messages</strong>
+                    <span data-en="Notes that say what matters." data-ja="大事なことを伝える言葉。">Notes that say what matters.</span>
+                </div>
+                <div class="panel">
+                    <strong data-en="Gallery" data-ja="ギャラリー">Gallery</strong>
+                    <span data-en="Simple snapshots and placeholders." data-ja="シンプルな写真やプレースホルダー。">Simple snapshots and placeholders.</span>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="section-title" data-en="Timeline" data-ja="タイムライン">Timeline</div>
+            <div class="note" P26?1?3? - ????????????????">Jan 3, 2026 - The first version of the site went live.</div>
+            <div class="note" P26?2?5? - ?????????????????">Feb 5, 2026 - New pages and time zones were added.</div>
+        </section>
+        <div class="footer" data-en="Made with care - Jan 3, 2026" data-ja="心をこめて - 2026年1月3日">Made with care - Jan 3, 2026</div>
+    </main>
+    <script src="main.js"></script>
+    <script src="i18n.js"></script>
+    <script src="hearts.js"></script>
+</body>
+</html>

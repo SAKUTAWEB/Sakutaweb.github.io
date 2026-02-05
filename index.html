@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Sakuta Web — For かわい" data-ja="Sakuta Web — かわいへ">Sakuta Web — For かわい</title>
+    <meta name="description" content="A small page dedicated to かわい.">
+    <meta property="og:title" content="Sakuta Web — For かわい">
+    <meta property="og:description" content="A small page dedicated to かわい.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sakutaweb.github.io/index.html/">
+    <meta property="og:image" content="https://sakutaweb.github.io/index.html/preview.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="hearts" id="hearts"></div>
+    <div class="tz-panel" aria-label="World clocks">
+        <div class="tz-card">
+            <span class="tz-dot" aria-hidden="true"></span>
+            <div class="tz-label">Japan</div>
+            <div class="tz-time" id="time-japan">--:--</div>
+        </div>
+        <div class="tz-card">
+            <span class="tz-dot" aria-hidden="true"></span>
+            <div class="tz-label">Delhi</div>
+            <div class="tz-time" id="time-delhi">--:--</div>
+        </div>
+    </div>
+    <main class="card">
+    <header class="site-header">
+        <div>
+            <span class="badge" data-en="My Favorite Person" data-ja="いちばん大好きな人">My Favorite Person</span>
+            <h1 data-en="Gift for かわい" data-ja="かわいへのギフト">Gift for かわい</h1>
+        </div>
+        <nav class="site-nav">
+            <a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a>
+            <a class="nav-link" href="about.html" data-en="About" data-ja="紹介">About</a>
+            <a class="nav-link" href="gallery.html" data-en="Gallery" data-ja="ギャラリー">Gallery</a>
+            <a class="nav-link" href="messages.html" data-en="Messages" data-ja="メッセージ">Messages</a>
+            <button class="nav-link ghost" type="button" id="langToggle">???</button>
+        </nav>
+    </header>
+    <p data-en="This page is just for you. I'll keep adding little surprises here."
+       data-ja="このページは、あなたのために作りました。これからも小さなサプライズをたくさん増やしていくね。">
+        This page is just for you. I'll keep adding little surprises here.
+    </p>
+    <div class="actions">
+        <a class="cta" href="#" id="sayHi" data-en="Say Hi" data-ja="こんにちは" data-name="Friend" data-message-en="Thanks for visiting, {name}!" data-message-ja="{name}、来てくれてありがとう！">Say Hi</a>
+        <a class="cta ghost" href="messages.html" data-en="Messages" data-ja="メッセージ">Messages</a>
+    </div>
+    <section class="section">
+        <div class="section-title" data-en="Explore" data-ja="探索">Explore</div>
+        <div class="section-grid">
+            <a class="panel" href="about.html">
+                <strong data-en="About" data-ja="紹介">About</strong>
+                <span data-en="Why this site exists" data-ja="このサイトの理由">Why this site exists</span>
+            </a>
+            <a class="panel" href="gallery.html">
+                <strong data-en="Gallery" data-ja="ギャラリー">Gallery</strong>
+                <span data-en="Snapshots and highlights" data-ja="小さな思い出のスナップ">Snapshots and highlights</span>
+            </a>
+        </div>
+    </section>
+    <div class="footer" data-en="Made with care — Jan 3, 2026" data-ja="心をこめて — 2026年1月3日">Made with care — Jan 3, 2026</div>
+    <div class="secret-wrap">
+        <button class="secret-toggle" type="button" id="secretToggle" data-en="Tap to reveal" data-ja="タップして表示">Tap to reveal</button>
+        <div class="secret-box" id="secretBox" data-en="i think this will be last work" data-ja="これが最後の作業になると思う。">i think this will be last work</div>
+    </div>
+</main>
+    <script src="main.js"></script>
+    <script src="i18n.js"></script>
+    <script src="hearts.js"></script>
+</body>
+</html>
+
+
+    
