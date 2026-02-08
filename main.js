@@ -78,10 +78,69 @@
         });
     }
 
+    function spawnConfetti(container) {
+        if (!container) return;
+        var colors = ["#ff4d6d", "#ffa3b5", "#5ac8ff", "#9b7bff", "#ffd166"];
+        for (var i = 0; i < 45; i += 1) {
+            var piece = document.createElement("span");
+            piece.className = "confetti";
+            piece.style.background = colors[i % colors.length];
+            piece.style.left = (20 + Math.random() * 60) + "%";
+            piece.style.top = (10 + Math.random() * 35) + "%";
+            piece.style.setProperty("--confetti-x", (Math.random() * 220 - 110) + "px");
+            piece.style.setProperty("--confetti-y", (Math.random() * 260 - 120) + "px");
+            piece.style.setProperty("--confetti-duration", (1.4 + Math.random() * 0.8) + "s");
+            container.appendChild(piece);
+            setTimeout(function (el) {
+                el.remove();
+            }, 2000, piece);
+        }
+    }
+
+    function setupAnniversaryOverlay() {
+        var overlay = document.getElementById("anniversaryOverlay");
+        var poppers = document.getElementById("anniversaryPoppers");
+        if (!overlay) return;
+        setTimeout(function () {
+            overlay.classList.add("show");
+            spawnConfetti(poppers);
+        }, 120);
+
+        function dismiss() {
+            overlay.classList.add("hide");
+            setTimeout(function () {
+                overlay.remove();
+            }, 400);
+        }
+
+        overlay.addEventListener("click", dismiss);
+        setTimeout(dismiss, 4200);
+    }
+
+    function setupFarewellReveal() {
+        var farewell = document.getElementById("farewellMessage");
+        if (!farewell) return;
+        if (!("IntersectionObserver" in window)) {
+            farewell.classList.add("show");
+            return;
+        }
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    farewell.classList.add("show");
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.4 });
+        observer.observe(farewell);
+    }
+
     updateWorldClocks();
     setActiveNav();
     setupSayHi();
     setupSecretBox();
+    setupAnniversaryOverlay();
+    setupFarewellReveal();
     if (japanTimeEl && delhiTimeEl) {
         setInterval(updateWorldClocks, 1000);
     }
